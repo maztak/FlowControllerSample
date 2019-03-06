@@ -26,13 +26,13 @@ final class AppFlowController: UIViewController {
 
     fileprivate func startMain() {
         let dependencyContainer = ListDependencyContainer()
-        let mainFlowController = ListFlowController(
+        let listFlowController = ListFlowController(
             dependencyContainer: dependencyContainer
         )
 
-        mainFlowController.delegate = self
-        add(childController: mainFlowController)
-        mainFlowController.start()
+        listFlowController.delegate = self
+        add(childController: listFlowController)
+        listFlowController.start()
     }
     
     fileprivate func startNewModalFlow(from viewController: UIViewController) {
